@@ -1,32 +1,40 @@
-const urlParams = new URLSearchParams(window.location.search);
-const url_screen = urlParams.get("screen");
-const screens =
+// TODO: Common file that differenciates (through a config.js) whether pages are in path (*/page) or arguments (*/screen=page)
+const page = window.location.pathname.substring(1);
+console.log(page);
+const pages =
 {
   "default": ["elements", "util"], // Scripts to be added everywhere
   "records": ["unlabeled_records"],
   "settings": ["settings_elements", "settings_page", "settings_handler"],
 }
 
-console.log("teste");
-
-$(window).ready(function(){console.log("teste");});
+$(window).ready(load_script);
 
 function load_script() {
     inject_scripts();
-    $(window).on('load', verify_settings);
+    //$(window).on('load', verify_settings);
 }
 
 function inject_scripts() {
-  if (url_screen in screens) {
-    inject_script_folder(url_screen);
+  if (page in pages) {
     inject_script_folder("default");
+    inject_script_folder(page);
   }
 }
 
 function inject_script_folder(page) {
-  for (var file in screens[page]) {
-    $.getScript(`https://web.tecnico.ulisboa.pt/bernardo.jordao/tribalwars/scripts/${page}/${screens[page][file]}.js`);
+  for (var file in pages[page]) {
+    inject_script(`file://D:\\Coding\\Userscripts\\wallet_budgetbakers\\${pages[page][file]}.js`);
   }
+}
+
+function inject_script(filepath) {
+  // $.getScript(filepath); // doesn't work for local files
+  // TODO: abstract element creation
+  let script = document.createElement('script');
+  script.type = "text/javascript";
+  script.src = filepath;
+  document.getElementsByTagName('head')[0].appendChild(script);
 }
 
 // Looks for settings in the local storage, and sets them as default if they're not present

@@ -4,6 +4,7 @@ const script_menu_btn = `<button type="button" class="ui blue mini circular comp
 const ADD_RECORD_SELECTOR = "#root > div > div > div._1V4hZqsf6Tn_Uoxjno3LXT > div > div > button";
 
 function createUtilityMenu() {
+    console.log("boas");
     addScriptMenuButton();
 }
 

@@ -1,16 +1,11 @@
-// ==UserScript==
-// @require      file://D:\Coding\Userscripts\wallet_budgetbakers\elements.js
-// ==/UserScript==
-
 // Selectors
 const MAIN_SELECTOR = "#root > div > div > main";
 const RECORD_TABLE_SELECTOR = "#root > div > div > main > div > div._5NFnhpp7joa9CQoFA2Fw- > div._1mGh4KCr_zK-cTWl1AVZse > div";
 // Classes
 const DAILY_RECORD_CLASS = "_3oJhqSCX8H5S0i6pA59f9k";
 
-
 // Initialize script
-// window.addEventListener('load', waitForLoad);
+window.addEventListener('load', waitForLoad);
 
 function waitForLoad() {
     let page_loaded = false;
