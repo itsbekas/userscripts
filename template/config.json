@@ -1,0 +1,8 @@
+{
+  "page_type": "path|parameter",
+  "injected_scripts": {
+    "default": [],
+    "": []
+  },
+  "use_local_storage": "true"
+}
