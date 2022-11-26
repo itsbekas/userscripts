@@ -1,10 +1,11 @@
 const config = {
-    "folder": "web.budgetbakers.com",
-    "page_type": "path",
+    "folder": "template",
+    "page_type": "path/query",
     "scripts": {
         "../common": ["base", "util"],
         "": [],
-        "records": []
+        "folder1": ["scriptA", "scriptB"],
+        "folder2": ["scriptC"]
     },
     "use_local_storage": "false"
 }

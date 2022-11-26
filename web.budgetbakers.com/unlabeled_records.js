@@ -1,3 +1,21 @@
+/*
+
+--- HIDE VERIFIED ---
+PSEUDOCODE:
+{
+For day in records:
+    Count verified records in day
+    If verified records == daily records:
+        Hide day
+    Else:
+        Hide verified records
+}
+To hide records: display = "none" in HTML
+Maybe add some random class like "hidden_record" to be able to quickly query every hidden record and display them again (in case I want to add other hidden stuff)
+--- END HIDE VERIFIED ---
+
+*/
+
 // Selectors
 const MAIN_SELECTOR = "#root > div > div > main";
 const RECORD_TABLE_SELECTOR = "#root > div > div > main > div > div._5NFnhpp7joa9CQoFA2Fw- > div._1mGh4KCr_zK-cTWl1AVZse > div";

@@ -1,4 +1,4 @@
-$(window).ready(load_script);
+//$(window).ready(load_script);
 
 function load_script() {
     if (typeof path == 'undefined') base_path = "https://raw.githubusercontent.com/itsbekas/userscripts/main/"
@@ -28,4 +28,8 @@ function verify_settings() {
   if (window.sessionStorage.getItem("twutility") == null) {
     reset_session_settings();
   }
+}
+
+function teste_inject() {
+  return "teste inject";
 }
