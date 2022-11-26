@@ -6,6 +6,6 @@
 // @grant        GM_xmlhttpRequest
 // @connect      127.0.0.1
 // @require      https://code.jquery.com/jquery-3.6.1.slim.min.js
-// @require      https://raw.githubusercontent.com/itsbekas/userscripts/main/common/base.js
+// @require      http://127.0.0.1:8080/common/base.js
 // @require      http://127.0.0.1:8080/web.budgetbakers.com/run.js
 // ==/UserScript==

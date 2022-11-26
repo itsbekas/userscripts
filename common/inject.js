@@ -15,7 +15,7 @@ function inject_scripts() {
 
 function inject_script_folder() {
   for (var file in pages[page]) {
-    inject_script(`http://127.0.0.1:8080/${pages[page][file]}.js`);
+    inject_script(`default_path${pages[page][file]}.js`);
   }
 }
 
