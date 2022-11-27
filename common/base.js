@@ -6,7 +6,7 @@
 const default_path = "http://127.0.0.1:8080";
 const default_id = "code_injection";
 
-function inject_script(code) {
+function injectScript(code) {
     e = document.createElement("script");
     e.type = "text/javascript";
     e.id = "code_injection";
@@ -15,18 +15,14 @@ function inject_script(code) {
     document.getElementsByTagName("head")[0].appendChild(e);
 }
 
-function get_script(filepath) {
+function getScript(filepath) {
     let path = default_path + filepath;
     return new Promise((resolve, reject) => {
         GM_xmlhttpRequest({
             method: "GET",
             url: path,
-            onload: function(response) {
-                resolve(response.responseText);
-            },
-            onerror: function(error) {
-                reject(error);
-            }
+            onload: function(response) { resolve(response.responseText); },
+            onerror: function(error) { reject(error); }
         });
     });
 }

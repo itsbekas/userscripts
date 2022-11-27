@@ -12,19 +12,19 @@ const config = {
 
 /* ----- DO NOT MODIFY ----- */
 
-window.onload = async (event) => { await inject_code(); };
+window.onload = async (event) => { await injectCode(); };
 
-async function inject_code() {
+async function injectCode() {
     let promises = [];
     folders = config["scripts"];
     Object.keys(folders).forEach((dir, _) => {
         folder = folders[dir];
         folder.forEach((file, _) => {
-            promises.push(get_script(`/${config["folder"]}/${dir}/${file}.js`));
+            promises.push(getScript(`/${config["folder"]}/${dir}/${file}.js`));
         })
     });
     Promise.all(promises).then((values) => {
         code = values.join("\n");
-        inject_script(code);
+        injectScript(code);
     });
 }

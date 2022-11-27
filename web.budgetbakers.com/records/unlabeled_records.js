@@ -23,7 +23,7 @@ const RECORD_TABLE_SELECTOR = "#root > div > div > main > div > div._5NFnhpp7joa
 const DAILY_RECORD_CLASS = "_3oJhqSCX8H5S0i6pA59f9k";
 
 // Initialize script
-window.addEventListener('load', waitForLoad);
+$(window).ready(waitForLoad);
 
 function waitForLoad() {
     let page_loaded = false;
@@ -65,7 +65,7 @@ function getLabeledRecords() {
 
 function getRecords() {
     // Note: not all records are loaded instantly, so this shouldn't be executed on load
-    return getClassElements(DAILY_RECORD_CLASS);
+    return getElementsByClass(DAILY_RECORD_CLASS);
 }
 
 function hasLabel(record) {
