@@ -4,7 +4,7 @@ const config = {
     "scripts": {
         "../common": ["vars", "base", "util", "jquery"],
         "": [],
-        "records": ["unlabeled_records", "elements"]
+        "records": ["unlabeled_records", "elements", "element_functions"]
     },
     "use_local_storage": "false"
 }

@@ -39,7 +39,8 @@ function waitForLoad() {
 
 function init() {
     console.log("Initializing script.");
-    createUtilityMenu();
+    addToggleButton();
+    addCustomFilters();
     hideLabeledRecords();
 }
 
