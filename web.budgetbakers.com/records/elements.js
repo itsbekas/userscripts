@@ -12,7 +12,7 @@ function addToggleButton() {
 
 function addCustomFilters() {
     let customFilterAccordion = `<div class="accordion ui lUJGSX54wFqNxoJsJ2c2M _3uK5nO3_RKz7E4x-6oFDPW">
-            <div class="title _37D2sJQ2lRixGNsvYXOWGd">
+            <div class="title _37D2sJQ2lRixGNsvYXOWGd" id="custom_filters" onclick=toggleCustomFilters()>
                 <i aria-hidden="true" class="dropdown icon"></i>
                 <span class="_3V5hQt-jNuvJMc3C5ahiNK">Custom Filters</span>
             </div>

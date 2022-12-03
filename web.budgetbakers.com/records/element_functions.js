@@ -10,3 +10,18 @@ function toggleScript() {
         setElementText(btn, "Script: Off");
     }
 }
+
+function toggleCustomFilters() {
+    let btn = getElementById("custom_filters");
+    if (hasClass(btn, "active")) {
+        removeClass(btn, "active");
+        hideCustomFilters();
+    } else {
+        addClass(btn, "active");
+        showCustomFilters();
+    }
+}
+
+function hideCustomFilters() {}
+
+function showCustomFilters() {}

@@ -8,3 +8,6 @@ function hideElement(query) {} // TODO
 function elementFromString(string) { return document.createRange().createContextualFragment(string); }
 function setElementClass(element, className) { element.className = className; }
 function setElementText(element, text) { element.innerHTML = text; }
+function hasClass(element, className) { return element.classList.contains(className); }
+function addClass(element, className) { element.classList.add(className); }
+function removeClass(element, className) { element.classList.remove(className); }
