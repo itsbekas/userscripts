@@ -12,16 +12,16 @@ function toggleScript() {
 }
 
 function toggleCustomFilters() {
-    let btn = getElementById("custom_filters");
-    if (hasClass(btn, "active")) {
-        removeClass(btn, "active");
-        hideCustomFilters();
-    } else {
-        addClass(btn, "active");
-        showCustomFilters();
-    }
+    let btn = getElementById("custom_filters_toggle");
+    let content = getElementById("custom_filters_content");
+    let activeClass = "active";
+    toggleClass(btn, activeClass);
+    toggleClass(content, activeClass);
 }
 
-function hideCustomFilters() {}
-
-function showCustomFilters() {}
+function toggleCustomFilter(id) {
+    let filter = getElementById(id);
+    let activeClass = "_3amjuBKxMzoKoV6CEKKwhx";
+    toggleClass(filter, activeClass);
+    hasClass(filter, activeClass) ? activateFilter(id) : deactivateFilter(id);
+}
