@@ -2,12 +2,15 @@ function toggleScript() {
     scriptOn = !scriptOn;
 
     let btn = getElementById("script-menu-btn");
+    let scriptElements = getElementsByClass("userscript_element");
     if (scriptOn) {
         setElementClass(btn, "ui green mini circular compact button");
         setElementText(btn, "Script: On");
+        for (let i = 0; i < scriptElements.length; i++) { showElement(scriptElements[i]); }
     } else {
         setElementClass(btn, "ui red mini circular compact button");
         setElementText(btn, "Script: Off");
+        for (let i = 0; i < scriptElements.length; i++) { if (isHideable(scriptElements[i])) hideElement(scriptElements[i]); }
     }
 }
 

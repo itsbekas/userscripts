@@ -7,7 +7,7 @@ function addToggleButton() {
             Script: On
         </button>`
     let addRecordBtn = getElementsByClass("xvabTpfEZZTy4YhFJJyvf")[0];
-    addRecordBtn.prepend(elementFromString(toggleBtn));
+    addRecordBtn.prepend(elementFromString(toggleBtn, hideable=false));
 }
 
 function addCustomFilters() {
@@ -25,6 +25,7 @@ function addCustomFilters() {
     let accountFilter = getElement("#root > div > div > main > div > div._5NFnhpp7joa9CQoFA2Fw- > div._14RWKiNFwtHCO_ubRsTZ57 > div:nth-child(3) > div > div:nth-child(4)");
     filterList.insertBefore(elementFromString(customFilterAccordion), accountFilter);
     addCustomFilter("Unlabeled Records");
+    addCustomFilter("Unverified Records");
 }
 
 function addCustomFilter(filterName) {
