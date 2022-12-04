@@ -26,5 +26,5 @@ function toggleCustomFilter(id) {
     let filter = getElementById(id);
     let activeClass = "_3amjuBKxMzoKoV6CEKKwhx";
     toggleClass(filter, activeClass);
-    hasClass(filter, activeClass) ? activateFilter(id) : deactivateFilter(id);
+    updateFilters();
 }

@@ -17,3 +17,4 @@ function toggleClass(element, className) { hasClass(element, className) ? remove
 function isHideable(element) { return element.hasAttribute("hideable"); }
 function setAttribute(element, attribute, value) { element.setAttribute(attribute, value); }
 function getAttribute(element, attribute) { return element.getAttribute(attribute); }
+function intersection(array1, array2) { return array1.filter(value => array2.includes(value)); }

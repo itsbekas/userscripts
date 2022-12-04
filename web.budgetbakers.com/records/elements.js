@@ -24,12 +24,12 @@ function addCustomFilters() {
     let searchButton = getElementsByClass("_1uSKSaPiYsN9Ka7HhUnDlE")[0];
     let accountFilter = getElement("#root > div > div > main > div > div._5NFnhpp7joa9CQoFA2Fw- > div._14RWKiNFwtHCO_ubRsTZ57 > div:nth-child(3) > div > div:nth-child(4)");
     filterList.insertBefore(elementFromString(customFilterAccordion), accountFilter);
-    addCustomFilter("Unlabeled Records");
-    addCustomFilter("Unverified Records");
+    addCustomFilter("Labeled Records");
+    addCustomFilter("Verified Records");
 }
 
 function addCustomFilter(filterName) {
-    let filterId = filterName.toLowerCase().replace(" ", "_");
+    let filterId = filterNameToId(filterName);
     let customFilterToggle = `<div class="_2GmG6EBEDCNoqdEZOPBhq0" >
         <div class="_3Cb8Xl79OFHGHax3XfDFNA">
             <div class="_1ztTodRZyA4BhZwgROneah"
